@@ -3,33 +3,34 @@ description:
 globs: 
 alwaysApply: false
 ---
-Description: Guidelines for using TailwindCSS and Tailwind Plus in the portfolio project
-Globs: /src/styles/**/*,/src/**/*.css,/src/**/*.tsx,/tailwind.config.*
+Description: Guidelines for Vite configuration and Vitest testing in the portfolio project
+Globs: /vite.config.ts,/tests/**/*,/app/**/*.test.ts,/app/**/*.test.tsx,/vitest.config.*
 
-# Tailwind CSS Guidelines
+# Vite & Vitest Guidelines
 
-## Configuration
-- Maintain single tailwind.config.js or .ts at project root
-- Define custom colors in theme.extend.colors
-- Define custom spacing in theme.extend.spacing
-- Document custom utility classes
+## Vite Configuration
+- Maintain single vite.config.ts at project root
+- Use environment variables for configuration
+- Define path aliases for clean imports
+- Optimize build settings for production
+- Include plugins in logical order
 
-## Usage Patterns
-- Use utility classes directly in JSX
-- Extract common patterns to @apply in CSS files
-- Create custom components for frequently used patterns
-- Follow mobile-first responsive design
-- Use dark: variant for dark mode support
+## Vitest Setup
+- Configure vitest in vite.config.ts or separate vitest.config.ts
+- Use testing-library/react for component tests
+- Implement setup files for common test configurations
+- Utilize mocks for external dependencies
 
-## Tailwind Plus Components
-- Reference the component library in documentation
-- Maintain consistent styling across Tailwind Plus adaptations
-- Extend components rather than override when possible
-- Document any customizations to Tailwind Plus components
+## Test Structure
+- Co-locate test files with source code
+- Name test files with .test.ts or .test.tsx suffix
+- Group related tests in describe blocks
+- Use clear test descriptions
+- Follow AAA pattern (Arrange-Act-Assert)
 
-## Best Practices
-- Group related utilities (layout, typography, colors)
-- Use arbitrary values sparingly
-- Extract complex combinations to component props
-- Add comments for non-obvious utility combinations
-- Use clsx/classnames for conditional classes
+## Test Coverage
+- Aim for 80%+ coverage on components
+- Test component rendering and interactions
+- Test custom hooks with renderHook
+- Test utility functions with unit tests
+- Include edge cases and error states

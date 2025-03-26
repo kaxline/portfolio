@@ -1,0 +1,44 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+Description: Guidelines for implementing Remix in the portfolio project
+Globs: /app/**/*,/remix.config.js,/app/routes/**/*
+
+# Remix Framework Guidelines
+
+## Routing
+- Use nested routes in /app/routes directory
+- Implement index routes for parent routes
+- Use dynamic segments with proper params typing
+- Leverage URL parameters for dynamic content
+- Follow Remix conventions for file-based routing
+
+## Data Loading
+- Implement loader functions for server-side data
+- Use action functions for mutations
+- Type loader and action data with TypeScript
+- Handle loading and error states appropriately
+- Leverage Remix's data revalidation features
+
+## Forms and Mutations
+- Use Remix Form component for data submission
+- Implement proper form validation
+- Handle optimistic UI updates
+- Use useTransition for pending state management
+- Provide clear error feedback to users
+
+## Server/Client Pattern
+- Keep server-only code in loaders and actions
+- Use useLoaderData() with proper typing
+- Include proper error boundaries
+- Implement progressive enhancement
+- Use defer/Await for non-critical data
+
+## Performance
+- Leverage Remix Document caching
+- Implement resource route caching
+- Use preload hints for critical resources
+- Apply proper HTTP caching headers
+- Optimize asset loading with Remix techniques

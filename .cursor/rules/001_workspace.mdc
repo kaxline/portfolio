@@ -3,7 +3,7 @@ description:
 globs: 
 alwaysApply: true
 ---
-Description: Portfolio site built with React, TypeScript, Vite, Vitest, and Tailwind CSS
+Description: Portfolio site built with React, Remix, TypeScript, Vite, Vitest, and Tailwind CSS
 Globs: /**/*
 
 # Portfolio Site Architecture
@@ -11,25 +11,29 @@ Globs: /**/*
 ## Core Technologies
 - TypeScript: Primary language for type-safe development
 - React: UI component framework
+- Remix: Full-stack React framework for server rendering and routing
 - Vite: Build tool and development server
 - Vitest: Testing framework
 - TailwindCSS: Utility-first CSS framework
 - Tailwind Plus (formerly Tailwind UI): Pre-built component library
-- React Router
 
 ## Directory Structure
-- /src: All source code
+- /app: Remix application code
+  - /routes: Route components and data loaders
   - /components: Reusable React components
-  - /pages: Page-level components
-  - /helpers: Utility functions
-  - /types: TypeScript type definitions
+  - /hooks: Custom React hooks
+  - /utils: Utility functions
+  - /models: Data models and server functions
   - /styles: Global styles and Tailwind configuration
-  main.tsx
+  - /types: TypeScript type definitions
+  - /assets: Static assets (images, fonts)
 - /tests: Test files for components and utilities
 - /public: Static files served as-is
 
 ## Key Constraints
 - Use functional components with hooks
 - Follow TypeScript best practices with proper typing
+- Implement Remix patterns for routing and data loading
 - Maintain responsive design using Tailwind's classes
 - Write tests for all components and utilities
+- Leverage server-side rendering for performance and SEO

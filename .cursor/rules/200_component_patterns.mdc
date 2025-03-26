@@ -4,16 +4,16 @@ globs:
 alwaysApply: false
 ---
 Description: Standardized patterns for React component implementation in the portfolio project
-Globs: /src/components/**/*,/src/pages/**/*
+Globs: /app/components/**/*,/app/routes/**/*
 
 # Component Implementation Patterns
 
 ## Component Template
 ```tsx
 import React from 'react';
-import { ComponentProps } from '../types';
+import { ComponentProps } from '~/types';
 
-export const ComponentName: React.FC = ({ 
+export const ComponentName: React.FC<ComponentProps> = ({ 
   prop1, 
   prop2,
   children 
@@ -21,18 +21,54 @@ export const ComponentName: React.FC = ({
   // Component logic here
   
   return (
-    
+    <div className="tailwind-classes">
       {/* Component JSX */}
-    
+    </div>
   );
 };
+```
+
+## Route Template
+```tsx
+import type { LoaderFunctionArgs, ActionFunctionArgs, MetaFunction } from '@remix-run/node';
+import { json } from '@remix-run/node';
+import { useLoaderData, useActionData } from '@remix-run/react';
+import type { RouteData } from '~/types';
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: 'Page Title' },
+    { name: 'description', content: 'Page description' }
+  ];
+};
+
+export async function loader({ params, request }: LoaderFunctionArgs) {
+  // Data loading logic
+  return json({ key: 'value' });
+}
+
+export async function action({ request }: ActionFunctionArgs) {
+  // Action handling logic
+  return json({ success: true });
+}
+
+export default function RouteName() {
+  const loaderData = useLoaderData<typeof loader>();
+  const actionData = useActionData<typeof action>();
+  
+  return (
+    <div className="tailwind-classes">
+      {/* Route JSX */}
+    </div>
+  );
+}
 ```
 
 ## Component Organization
 - UI/: Basic UI elements (Button, Card, Input)
 - Layout/: Structure components (Container, Grid, Section)
 - Features/: Business logic components (ContactForm, ProjectCard)
-- Pages/: Page-level components
+- routes/: Route components with loaders and actions
 
 ## State Management
 - Use useState for simple state
