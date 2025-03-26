@@ -3,7 +3,43 @@ import type { MetaFunction } from "@remix-run/node";
 export const meta: MetaFunction = () => {
   return [
     { title: "Keith Axline" },
-    { name: "description", content: "Keith Axline" },
+    { name: "description", content: "I live in Portland, Oregon and work on technology that helps people." },
+    { rel: "icon", href: "/favicon.ico" },
+    { rel: "icon", type: "image/png", href: "/favicon-16x16.png", sizes: "16x16" },
+    { rel: "icon", type: "image/png", href: "/favicon-32x32.png", sizes: "32x32" },
+    { rel: "manifest", href: "/site.webmanifest" },
+    { rel: "application-name", content: "Keith Axline" },
+    { rel: "theme-color", content: "#000000" },
+
+    // Android
+    { rel: "android-chrome-192x192", href: "/android-chrome-192x192.png", sizes: "192x192" },
+    { rel: "android-chrome-512x512", href: "/android-chrome-512x512.png", sizes: "512x512" },
+
+    // Apple
+    { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" },
+    { rel: "apple-mobile-web-app-title", content: "Keith Axline" },
+
+    // Microsoft
+    { rel: "msapplication-TileColor", content: "#000000" },
+
+    // Open Graph tags
+    { property: "og:title", content: "Keith Axline" },
+    { property: "og:description", content: "Keith Axline - Projects, writings and more" },
+    { property: "og:url", content: "https://axline.io" }, // Update with your actual URL
+    { property: "og:type", content: "website" },
+    { property: "og:image", content: "https://axline.io/embed_image_1200x630.png" }, // Update with your profile pic URL
+    { property: "og:image:alt", content: "Keith Axline" },
+    { property: "og:image:width", content: "1200" }, // Recommended size for og:image
+    { property: "og:image:height", content: "630" }, // Recommended size for og:image
+    { property: "og:site_name", content: "Keith Axline" },
+
+    // Twitter Card tags
+    { name: "twitter:card", content: "summary_large_image" }, // "summary" for smaller image
+    { name: "twitter:title", content: "Keith Axline" },
+    { name: "twitter:description", content: "Keith Axline - Projects, writings and more" },
+    { name: "twitter:image", content: "https://axline.io/embed_image_1200x630.png" }, // Update with your profile pic URL
+    { name: "twitter:image:alt", content: "Keith Axline" },
+    { name: "twitter:creator", content: "@kaxline" }, 
   ];
 };
 
@@ -39,7 +75,8 @@ export default function Index() {
           </ul>
       </main>
       
-      <footer className="mt-auto text-sm text-gray-400 flex items-center justify-between">
+      <footer className="mt-auto text-sm text-gray-400 w-full">
+        <div className="flex flex-row items-center justify-between w-full">
           <p>&copy; 2025</p>
           <div className="social-links flex space-x-6">
               <a 
@@ -61,6 +98,13 @@ export default function Index() {
                   Warpcast
               </a>
           </div>
+        </div>
+        <p className="hidden">
+          Photo by <a href="https://unsplash.com/@arnaudastro?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">arnaud girault</a> on <a href="https://unsplash.com/photos/a-star-forming-region-in-the-sky-IjEtFjxXweE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        </p>
+          
+          
+      
       </footer>
     </>
   );
