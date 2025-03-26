@@ -1,0 +1,35 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Description: Portfolio site built with React, TypeScript, Vite, Vitest, and Tailwind CSS
+Globs: /**/*
+
+# Portfolio Site Architecture
+
+## Core Technologies
+- TypeScript: Primary language for type-safe development
+- React: UI component framework
+- Vite: Build tool and development server
+- Vitest: Testing framework
+- TailwindCSS: Utility-first CSS framework
+- Tailwind Plus (formerly Tailwind UI): Pre-built component library
+- React Router
+
+## Directory Structure
+- /src: All source code
+  - /components: Reusable React components
+  - /pages: Page-level components
+  - /helpers: Utility functions
+  - /types: TypeScript type definitions
+  - /styles: Global styles and Tailwind configuration
+  main.tsx
+- /tests: Test files for components and utilities
+- /public: Static files served as-is
+
+## Key Constraints
+- Use functional components with hooks
+- Follow TypeScript best practices with proper typing
+- Maintain responsive design using Tailwind's classes
+- Write tests for all components and utilities

@@ -1,0 +1,35 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+Description: Guidelines for using TailwindCSS and Tailwind Plus in the portfolio project
+Globs: /src/styles/**/*,/src/**/*.css,/src/**/*.tsx,/tailwind.config.*
+
+# Tailwind CSS Guidelines
+
+## Configuration
+- Maintain single tailwind.config.js or .ts at project root
+- Define custom colors in theme.extend.colors
+- Define custom spacing in theme.extend.spacing
+- Document custom utility classes
+
+## Usage Patterns
+- Use utility classes directly in JSX
+- Extract common patterns to @apply in CSS files
+- Create custom components for frequently used patterns
+- Follow mobile-first responsive design
+- Use dark: variant for dark mode support
+
+## Tailwind Plus Components
+- Reference the component library in documentation
+- Maintain consistent styling across Tailwind Plus adaptations
+- Extend components rather than override when possible
+- Document any customizations to Tailwind Plus components
+
+## Best Practices
+- Group related utilities (layout, typography, colors)
+- Use arbitrary values sparingly
+- Extract complex combinations to component props
+- Add comments for non-obvious utility combinations
+- Use clsx/classnames for conditional classes

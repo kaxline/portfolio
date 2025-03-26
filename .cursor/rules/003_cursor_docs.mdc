@@ -1,0 +1,28 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+Description: These files contain reference documentation and guides to aid in development efforts
+Globs: .cursor/docs/**/*
+
+# Documentation Structure
+
+## Categories
+- setup: Project setup and configuration guides
+- components: Documentation for reusable components
+- styles: Tailwind usage guidelines and custom styles
+- testing: Testing strategies and patterns
+- deployment: Deployment procedures
+
+## File Organization
+- Use descriptive filenames in kebab-case
+- Group related documentation in subdirectories
+- Include code examples where applicable
+- Keep documentation updated with code changes
+
+## Cross-Referencing
+- Use @ tags to reference specific files
+- Link to official documentation for external libraries
+- Include version information for all dependencies
+- Use consistent terminology throughout docs

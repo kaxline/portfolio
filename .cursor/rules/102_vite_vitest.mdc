@@ -1,0 +1,36 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+Description: Guidelines for Vite configuration and Vitest testing in the portfolio project
+Globs: /vite.config.ts,/tests/**/*,/src/**/*.test.ts,/src/**/*.test.tsx,/vitest.config.*
+
+# Vite & Vitest Guidelines
+
+## Vite Configuration
+- Maintain single vite.config.ts at project root
+- Use environment variables for configuration
+- Define path aliases for clean imports
+- Optimize build settings for production
+- Include plugins in logical order
+
+## Vitest Setup
+- Configure vitest in vite.config.ts or separate vitest.config.ts
+- Use testing-library/react for component tests
+- Implement setup files for common test configurations
+- Utilize mocks for external dependencies
+
+## Test Structure
+- Co-locate test files with source code
+- Name test files with .test.ts or .test.tsx suffix
+- Group related tests in describe blocks
+- Use clear test descriptions
+- Follow AAA pattern (Arrange-Act-Assert)
+
+## Test Coverage
+- Aim for 80%+ coverage on components
+- Test component rendering and interactions
+- Test custom hooks with renderHook
+- Test utility functions with unit tests
+- Include edge cases and error states

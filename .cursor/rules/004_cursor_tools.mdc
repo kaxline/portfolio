@@ -1,0 +1,29 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+Description: This folder contains tools and scripts to aid in workspace efforts
+Globs: .cursor/tools/**/*,.cursor/tools/temp/**/*
+
+# Development Tools
+
+## Script Categories
+- build: Build and bundling scripts
+- lint: Code linting and formatting tools
+- test: Testing utilities and helpers
+- generate: Code generation scripts
+- deploy: Deployment automation
+
+## Usage Guidelines
+- All scripts should be executable from package.json
+- Use TypeScript for complex scripts
+- Document script purpose and parameters
+- Handle errors gracefully with meaningful messages
+- Use consistent naming conventions
+
+## Tool Dependencies
+- ESLint: Code linting
+- Prettier: Code formatting
+- Husky: Git hooks
+- lint-staged: Run linters on staged files

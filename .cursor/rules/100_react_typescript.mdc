@@ -1,0 +1,36 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Description: Guidelines for React and TypeScript integration in the portfolio project
+Globs: /src/**/*.tsx,/src/**/*.ts
+
+# React & TypeScript Guidelines
+
+## Component Structure
+- Use functional components with explicit return types
+- Define props interfaces for all components
+- Implement FC<PropsType> or explicit return type
+- Use named exports for components
+- One component per file
+- Keep components focused on single responsibility
+
+## TypeScript Usage
+- Avoid 'any' types except in test files
+- Use proper type imports from libraries
+- Define interfaces in separate files for reused types
+- Use discriminated unions for complex state
+- Leverage generics for reusable components
+
+## State Management
+- Use React hooks (useState, useReducer) for local state
+- Implement custom hooks for reused logic
+- Consider React Context for shared state
+- Add proper typing to all state values and handlers
+
+## File Naming
+- PascalCase for component files (.tsx)
+- camelCase for utility files (.ts)
+- types.ts for type definitions
+- index.ts for barrel exports
